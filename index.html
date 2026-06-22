@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BELYBELLA Ltd - Premium growers and suppliers of fresh organic tomatoes and green peas in Rwanda. Modern greenhouse farming & drip irrigation.">
+    <meta name="author" content="BELYBELLA Ltd">
+    <title>BELYBELLA Ltd | Modern Agribusiness Rwanda</title>
+    
+    <!-- Google Fonts: Outfit (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Style Sheets -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper" class="page-wrapper">
+        
+        <!-- ==================================================== -->
+        <!-- PUBLIC HEADER                                        -->
+        <!-- ==================================================== -->
+        <header id="public-header" class="public-header">
+            <div class="nav-container">
+                <a href="#/home" class="logo-link">
+                    <div class="logo">
+                        <div class="logo-text">
+                            <span class="logo-main">BELYBELLA</span>
+                            <span class="logo-sub" id="logo-sub-text">Agribusiness Ltd</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <nav id="public-nav" class="public-nav">
+                    <ul>
+                        <li><a href="#/home" class="nav-link" id="nav-home">Home</a></li>
+                        <li><a href="#/about" class="nav-link" id="nav-about">About Us</a></li>
+                        <li><a href="#/products" class="nav-link" id="nav-products">Products</a></li>
+                        <li><a href="#/services" class="nav-link" id="nav-services">Services</a></li>
+                        <li><a href="#/blog" class="nav-link" id="nav-blog">Blog</a></li>
+                        <li><a href="#/gallery" class="nav-link" id="nav-gallery">Gallery</a></li>
+                        <li><a href="#/contact" class="nav-link" id="nav-contact">Contact</a></li>
+                        <li><a href="#/login" class="nav-btn" id="nav-login"><span id="nav-login-txt">Portal</span></a></li>
+                        <li>
+                            <button id="lang-toggle-btn" class="lang-toggle-btn" title="Toggle Language">
+                                <span id="current-lang-label">RW</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle menu">Menu</button>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="mobile-menu">
+                <ul>
+                    <li><a href="#/home" class="mobile-link" id="mob-nav-home">Home</a></li>
+                    <li><a href="#/about" class="mobile-link" id="mob-nav-about">About Us</a></li>
+                    <li><a href="#/products" class="mobile-link" id="mob-nav-products">Products</a></li>
+                    <li><a href="#/services" class="mobile-link" id="mob-nav-services">Services</a></li>
+                    <li><a href="#/blog" class="mobile-link" id="mob-nav-blog">Blog</a></li>
+                    <li><a href="#/gallery" class="mobile-link" id="mob-nav-gallery">Gallery</a></li>
+                    <li><a href="#/contact" class="mobile-link" id="mob-nav-contact">Contact</a></li>
+                    <li><a href="#/login" class="mobile-link mobile-btn" id="mob-nav-login"><span id="mob-nav-login-txt">Portal Login</span></a></li>
+                    <li>
+                        <button id="mobile-lang-toggle-btn" class="mobile-lang-btn">
+                            <span id="mobile-current-lang-label">Kinyarwanda</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- ==================================================== -->
+        <!-- ADMIN DASHBOARD LAYOUT                               -->
+        <!-- ==================================================== -->
+        <div id="admin-layout" class="admin-layout hidden">
+            <!-- Sidebar -->
+            <aside class="admin-sidebar">
+                <div class="sidebar-brand">
+                    <div class="logo-text">
+                        <span class="logo-main">BELYBELLA</span>
+                        <span class="logo-sub">Admin Center</span>
+                    </div>
+                </div>
+                
+                <div class="admin-user-badge">
+                    <div class="admin-avatar" id="admin-user-avatar">AD</div>
+                    <div class="admin-user-info">
+                        <h4 id="admin-user-name">Byiringiro Belange</h4>
+                        <span id="admin-user-role">CEO / Administrator</span>
+                    </div>
+                </div>
+                
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="#/admin" class="sidebar-link" id="sidebar-dashboard">
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/admin/products" class="sidebar-link" id="sidebar-products">
+                                <span>Products</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/admin/blog" class="sidebar-link" id="sidebar-blog">
+                                <span>Blog Posts</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/admin/messages" class="sidebar-link" id="sidebar-messages">
+                                <span>Messages</span>
+                                <span class="badge badge-danger hidden" id="unread-messages-count">0</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/admin/users" class="sidebar-link" id="sidebar-users">
+                                <span>User Management</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="sidebar-footer">
+                    <button id="admin-logout-btn" class="logout-btn">
+                        <span>Sign Out</span>
+                    </button>
+                </div>
+            </aside>
+            
+            <!-- Mobile Admin Header Toggle -->
+            <div class="admin-mobile-header">
+                <button id="admin-sidebar-toggle" class="admin-sidebar-toggle">Menu</button>
+                <div class="admin-mobile-brand">BELYBELLA Admin</div>
+                <button id="admin-mobile-logout" class="admin-mobile-logout-btn">Sign Out</button>
+            </div>
+            
+            <!-- Main Content Area -->
+            <div class="admin-main-wrapper">
+                <header class="admin-header-desktop">
+                    <div class="admin-header-title">
+                        <h2 id="admin-view-title">Dashboard Overview</h2>
+                        <p id="admin-view-subtitle">Manage products, posts, and inquiries</p>
+                    </div>
+                    <div class="admin-header-actions">
+                        <a href="#/home" class="view-site-link" target="_blank">
+                            View Website
+                        </a>
+                    </div>
+                </header>
+                
+                <main class="admin-content" id="admin-content-outlet">
+                    <!-- Router injects admin pages here -->
+                </main>
+            </div>
+        </div>
+
+        <!-- ==================================================== -->
+        <!-- PUBLIC CONTENT CONTAINER                             -->
+        <!-- ==================================================== -->
+        <main id="app-outlet" class="app-outlet">
+            <!-- Router injects public pages here -->
+        </main>
+
+        <!-- ==================================================== -->
+        <!-- PUBLIC FOOTER                                        -->
+        <!-- ==================================================== -->
+        <footer id="public-footer" class="public-footer">
+            <div class="footer-container">
+                <div class="footer-brand-col">
+                    <div class="logo">
+                        <div class="logo-text">
+                            <span class="logo-main">BELYBELLA</span>
+                            <span class="logo-sub">Agribusiness Ltd</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc" id="footer-desc">
+                        Pioneering modern greenhouse farming and sustainable drip irrigation systems in Eastern Rwanda. Freshness, quality, and community-driven agriculture.
+                    </p>
+                </div>
+                
+                <div class="footer-links-col">
+                    <h3 id="footer-explore-title">Explore</h3>
+                    <ul>
+                        <li><a href="#/home" id="footer-link-home">Home</a></li>
+                        <li><a href="#/about" id="footer-link-about">About Us</a></li>
+                        <li><a href="#/products" id="footer-link-products">Products Catalog</a></li>
+                        <li><a href="#/services" id="footer-link-services">Our Services</a></li>
+                        <li><a href="#/blog" id="footer-link-blog">Company Blog</a></li>
+                        <li><a href="#/gallery" id="footer-link-gallery">Photo Gallery</a></li>
+                        <li><a href="#/contact" id="footer-link-contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact-col">
+                    <h3 id="footer-hq-title">Our Headquarters</h3>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <span id="footer-address">
+                                Bitoma Village, Cyinzovu Cell,<br>
+                                Kabarondo Sector, Kayonza District,<br>
+                                Eastern Province, Rwanda
+                            </span>
+                        </li>
+                        <li>
+                            <span>+250 786 003 620</span>
+                        </li>
+                        <li>
+                            <span>info@belybella.com / sales@belybella.com</span>
+                        </li>
+                        <li>
+                            <span id="footer-hours">Mon - Sat: 7:00 AM - 5:30 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-container">
+                    <p id="footer-copyright">&copy; 2026 BELYBELLA Ltd. All Rights Reserved.</p>
+                    <p id="footer-designer">Designed with dedication for Sustainable Agriculture. CEO: Byiringiro Belange</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Application Logic Script -->
+    <script src="js/app.js"></script>
+</body>
+</html>
