@@ -1822,11 +1822,7 @@ function renderLogin() {
                         <label class="form-label">Password</label>
                         <input type="password" id="login-password" required class="form-control" placeholder="••••••••">
                     </div>
-                    <div style="background-color: var(--warning-light); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px; padding: 12px; margin-bottom: 24px; text-align: left; font-size: 0.8rem; color: #92400e;">
-                        <strong>Demo Access:</strong><br>
-                        Username: <code>admin</code><br>
-                        Password: <code>belybella2026</code>
-                    </div>
+
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
                 </form>
             </div>
